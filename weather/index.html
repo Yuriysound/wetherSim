@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+		 
+		
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Просто погода</title>
+
+    <!-- Bootstrap -->
+	<link href="css/weather-icons.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href = "css/simple.css" rel = "stylesheet" type = "text/css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&language=uk" type="text/javascript"></script>
+	<script type="text/javascript">
+											  function initialize() {
+
+					 var options = {
+					  types: ['(cities)'],
+					  componentRestrictions: {country: "ukr"}
+					 };
+
+					 var input = document.getElementById('searchTextField');
+					 var autocomplete = new google.maps.places.Autocomplete(input, options);
+					}
+					google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		
+  </head>
+  <body>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+	
+	
+	<div class="container">
+		<div class="row">
+						
+						<div class="col col-md-12 col-lg-12 col-sm-12 col-xs-12 "> 
+						<header>
+							<h1>
+										<a href="file:///E:/Навчання/WEB/Weather/index.html">
+										<span  class="glyphicon glyphicon-cloud ic"></span>
+										</a>
+										Просто погода!
+										</h1>
+							<span class="ln">
+									<input type="image" src="uk.png" value="Подать заявку" name="имя"></input> 
+									<input type="image" src="ua.png" value="Подать заявку" name="имя"></input>
+							</span>
+
+					<form class="form-horizontal" role="form">
+								<div class="input-group">
+											<label class="control-label col-sm-2 col-md-2" for="text">Місто</label>
+										<div class="col col-md-5 col-lg-4 col-sm-10 col-xs-11 "> 
+										 <div class="input-group">
+											<input type="text" class="form-control" id="searchTextField" placeholder="Введіть місто">		
+														<span class="input-group-btn">
+																<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search "> </span></button>
+														</span>
+											</div>			
+										</div>
+							    </div>
+					</form>
+					</header>
+					<nav>
+									<ul class="nav nav-pills ">
+													<li class="active">
+													<a data-toggle="pill" href="#home"><p>Погода сьогодні</p>
+													
+													<table  class="tb">
+																<tr class="fb" >
+																	
+																	<td> Вдень </td>
+																	<td>Вдень </td>
+																	<td>Вночі </td>
+																</tr>
+																<tr>											
+																	<td >  <img src="png/33.png" alt=""> 	</td>
+																	<td> <img src="png/38.png" alt="">	</td>	
+																	<td >  <img src="png/25.png" alt=""> 	</td>
+																	
+																</tr>					
+																<tr>
+																	<td><i class="wi wi-celsius"></i>10</td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-strong-wind"></i>3 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+
+																</tr>
+													</table>
+													
+													
+													</a>
+													</li>
+													<li><a data-toggle="pill" href="#menu1">
+													<p>Погода на завтра</p>
+														<table  align="center" width=100% style="background:transparent">
+																<tr class="fb" >
+																	
+																	<td> Вдень </td>
+																	<td>Вдень </td>
+																	<td>Вночі </td>
+																</tr>
+																<tr>											
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	<td> <img src="png/30.png" alt="">	</td>	
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	
+																</tr>					
+																<tr>
+																	<td><i class="wi wi-celsius"></i>10</td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-strong-wind"></i>3 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+
+																</tr>
+													</table> 
+													</a>
+													</li>
+													<li><a data-toggle="pill" href="#menu2"><p>Погода на </p>
+													<table  align="center" width=100% style="background:transparent">
+																<tr class="fb" >
+																	
+																	<td> Вдень </td>
+																	<td>Вдень </td>
+																	<td>Вночі </td>
+																</tr>
+																<tr>											
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	<td> <img src="png/30.png" alt="">	</td>	
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	
+																</tr>					
+																<tr>
+																	<td><i class="wi wi-celsius"></i>10</td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-strong-wind"></i>3 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+
+																</tr>
+													</table> 
+													
+													
+													</a>
+													</li>
+													<li><a data-toggle="pill" href="#menu3"><p>Погода на </p>
+													<table  align="center" width=100% style="background:transparent">
+																<tr class="fb" >
+																	
+																	<td> Вдень </td>
+																	<td>Вдень </td>
+																	<td>Вночі </td>
+																</tr>
+																<tr>											
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	<td> <img src="png/30.png" alt="">	</td>	
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	
+																</tr>					
+																<tr>
+																	<td><i class="wi wi-celsius"></i>10</td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-strong-wind"></i>3 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+
+																</tr>
+													</table> 
+													
+													
+													</a>
+													</li>
+													<li><a data-toggle="pill" href="#menu4"><p>Погода на </p>
+													<table  align="center" width=100% style="background:transparent">
+																<tr class="fb" >
+																	
+																	<td> Вдень </td>
+																	<td>Вдень </td>
+																	<td>Вночі </td>
+																</tr>
+																<tr>											
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	<td> <img src="png/30.png" alt="">	</td>	
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	
+																</tr>					
+																<tr>
+																	<td><i class="wi wi-celsius"></i>10</td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-strong-wind"></i>3 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+
+																</tr>
+													</table> 
+													
+													
+													</a>
+													</li>
+													<li><a data-toggle="pill" href="#menu5"><p>Погода на </p>
+													<table  align="center" width=100% style="background:transparent">
+																<tr class="fb" >
+																	
+																	<td> Вдень </td>
+																	<td>Вдень </td>
+																	<td>Вночі </td>
+																</tr>
+																<tr>											
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	<td> <img src="png/30.png" alt="">	</td>	
+																	<td >  <img src="png/30.png" alt=""> 	</td>
+																	
+																</tr>					
+																<tr>
+																	<td><i class="wi wi-celsius"></i>10</td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+																	<td><i class="wi wi-celsius"></i>10 </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																	<td><i class="wi wi-sprinkles"></i>100% </td>
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-strong-wind"></i>3 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+																	<td><i class="wi wi-strong-wind"></i>13 м/с </td>
+
+																</tr>
+																<tr>													
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+																	<td><i class="wi wi-umbrella"></i>1.8 мм </td>
+
+																</tr>
+													</table> 
+													
+													
+													</a>
+													</li>
+													
+													
+									</ul>
+					</nav>				
+					<article>
+								 
+					</article>			  
+					<footer>
+							
+							<p>Дякую, що ви скористались нашим сайтом</p>
+							<a href=file:///E:/Навчання/WEB/Weather/contact.html  class="btn btn-default btn-md">
+							<span class="glyphicon glyphicon-envelope ">        </span>  Зв'язок з нами  </a> 
+										
+					</footer>
+				</div>	
+		</div>
+	</div>
+  </body>
+</html>
