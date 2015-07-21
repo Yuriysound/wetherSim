@@ -1,15 +1,18 @@
+
 .db{
 position:relative;
 }
 
 body{
-background:url('clouds.jpg');
+//background:url('clouds.jpg');
 }
 
 td{
 text-align:center;
+width:175px;
+
 }
-form{
+.for{
 padding:25px 25px 25px 25px;
 }
 .ln{
