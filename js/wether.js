@@ -174,7 +174,7 @@ $(function() {
    $('#6p2').html('<i class="wi wi-thermometer"></i>' + data.list[37].main.pressure);
    $('#6p3').html('<i class="wi wi-thermometer"></i>' + data.list[40].main.pressure);
     }
-    adw51b33gi
+    
     function fnErr(msg) {
       console.error(msg);   
     }
